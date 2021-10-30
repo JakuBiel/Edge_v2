@@ -43,3 +43,22 @@ ul[class^="nav"] {
     .navi a:hover {
       border-bottom: #28a745 2px solid;
       transition: 5s color; }
+
+.showcase-content {
+  height: 100vh;
+  text-align: center;
+  background: url(/dist/img/home/showcase.jpg) no-repeat center center/cover;
+  opacity: 0.9;
+  z-index: -1; }
+  .showcase-content:before {
+    content: "";
+    background: #333;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .showcase-content h1 {
+    font-size: 3rem;
+    padding-top: 40vh; }
