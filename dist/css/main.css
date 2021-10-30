@@ -1,2 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
-  background: red; }
+  background: #333;
+  color: #f4f4f4;
+  font-family: "Open Sans", sans-serif; }
+
+.container {
+  margin: 0 auto;
+  padding: 2rem 2rem; }
+
+a {
+  text-decoration: none;
+  color: #f4f4f4; }
+
+li {
+  list-style: none; }
+
+span,
+.nav-logo i {
+  color: #28a745; }
+
+div[class^="nav"],
+ul[class^="nav"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  opacity: 0.7; }
+  .navi a {
+    padding: 0.5rem 0rem;
+    margin: 0rem 1rem;
+    border-bottom: #f4f4f4 2px solid transparent; }
+    .navi a:hover {
+      border-bottom: #28a745 2px solid;
+      transition: 5s color; }
