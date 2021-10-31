@@ -117,7 +117,8 @@ span,
     width: 100%;
     height: 100%;
     object-fit: cover; }
-  .flex-columns div[class$="txt"] {
+  .flex-columns div[class$="txt"],
+  .flex-columns div[class$="form"] {
     text-align: left;
     padding: 2rem;
     width: 50%;
@@ -125,9 +126,11 @@ span,
     flex-direction: column;
     align-items: flex-start;
     justify-content: center; }
-    .flex-columns div[class$="txt"] h1 {
+    .flex-columns div[class$="txt"] h1,
+    .flex-columns div[class$="form"] h1 {
       padding: 1rem 0; }
-    .flex-columns div[class$="txt"] a[class^="btn"] {
+    .flex-columns div[class$="txt"] a[class^="btn"],
+    .flex-columns div[class$="form"] a[class^="btn"] {
       border: 1px solid #f4f4f4;
       margin-top: 2rem; }
 
@@ -177,21 +180,29 @@ span,
       max-width: 450px;
       width: 100%;
       height: 100%; }
-    #cases .cases-photo a:after {
-      content: "";
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%; }
-    #cases .cases-photo a:hover {
-      cursor: pointer;
-      position: relative;
-      z-index: 1; }
 
 #contact {
   text-align: center;
-  background: #f4f4f4;
-  color: #333; }
+  background: #dbdbdb;
+  color: #333;
+  height: 450px; }
+  #contact .contact-form {
+    display: block;
+    padding: 2rem; }
+    #contact .contact-form h1 {
+      font-weight: 100;
+      padding: 0 0 2rem 0; }
+    #contact .contact-form input {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.75rem 0;
+      border-style: none;
+      border-radius: 5px; }
+    #contact .contact-form .btn {
+      margin-top: 2rem;
+      background: #28a745;
+      color: #f4f4f4; }
+  #contact img {
+    object-fit: cover;
+    height: 450px; }
