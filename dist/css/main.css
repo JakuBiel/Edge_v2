@@ -10,11 +10,12 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 2rem 2rem; }
+  padding: 1rem 2rem; }
 
 a {
   text-decoration: none;
-  color: #f4f4f4; }
+  color: #f4f4f4;
+  font-weight: 600; }
 
 li {
   list-style: none; }
@@ -35,7 +36,9 @@ ul[class^="nav"] {
   width: 100%;
   position: fixed;
   top: 0px;
-  opacity: 0.7; }
+  background: #333;
+  opacity: 0.7;
+  z-index: 1; }
   .navi a {
     padding: 0.5rem 0rem;
     margin: 0rem 1rem;
@@ -44,21 +47,92 @@ ul[class^="nav"] {
       border-bottom: #28a745 2px solid;
       transition: 5s color; }
 
+.btn-green, .btn-blue {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; }
+
+.btn-green {
+  background: #28a745; }
+
+.btn-blue {
+  background: #0284d0; }
+
 .showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   text-align: center;
   background: url(/dist/img/home/showcase.jpg) no-repeat center center/cover;
-  opacity: 0.9;
-  z-index: -1; }
-  .showcase-content:before {
+  z-index: 0;
+  position: relative; }
+  .showcase-content:after {
     content: "";
-    background: #333;
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%; }
   .showcase-content h1 {
-    font-size: 3rem;
-    padding-top: 40vh; }
+    margin-top: 22px;
+    font-size: 4rem;
+    font-weight: 100; }
+  .showcase-content h3 {
+    padding: 1rem 0; }
+
+.feats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  color: #333; }
+  .feats .feat {
+    text-align: center;
+    padding: 1rem; }
+    .feats .feat i {
+      color: #f4f4f4;
+      background: #28a745;
+      padding: 1rem;
+      border-radius: 50%; }
+    .feats .feat h3 {
+      font-weight: 900;
+      padding: 1rem 0; }
+
+.flex-columns {
+  display: flex;
+  height: 350px; }
+  .flex-columns div[class$="img"] {
+    width: 50%; }
+  .flex-columns img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .flex-columns div[class$="txt"] {
+    text-align: left;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .flex-columns div[class$="txt"] h1 {
+      padding: 1rem 0; }
+    .flex-columns div[class$="txt"] a[class^="btn"] {
+      border: 1px solid #f4f4f4;
+      margin-top: 2rem; }
+
+.solutions-txt {
+  background: #28a745; }
+
+.blog-txt {
+  background: #0284d0; }
+
+.reverse {
+  flex-direction: row-reverse; }
